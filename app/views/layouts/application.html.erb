@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
     <link href="https://strictcity.live/elevation/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
         <link href="https://strictcity.live/elevation/assets/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="https://strictcity.live/elevation/assets/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -33,7 +35,7 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div>
-          <%= link_to image_tag('logo.png', :style => 'width: 50px; margin: 10px;'), root_path %>
+          <%= link_to image_tag('life2.png', :style => 'width: 52px; margin-left: 30px;'), root_path %>
         </div>
     </div>
 
@@ -47,10 +49,6 @@
                                 </button>
                     <span class="clearfix"></span>
                 </div>
-
-                
-
-
                 <ul class="nav navbar-nav navbar-right pull-right">
                     <li>
                         <!-- Notification -->
@@ -69,13 +67,11 @@
                         </div>
                         <!-- End Notification bar -->
                     </li>
-
                     <li class="dropdown user-box">
                         <a href="#" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
                                         <img src="https://strictcity.live/elevation/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
-                                        <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>
+                                        <div class="user-status away"><i class="fa fa-down"></i></div>
                                     </a>
-
                         <ul class="dropdown-menu">
                             <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
                             <li><%= link_to 'Import Pointer', new_church_path %></li>

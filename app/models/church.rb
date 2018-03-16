@@ -1,5 +1,13 @@
 class Church < ApplicationRecord
 
+	validates :fname, presence: true
+	validates :lname, presence: true
+	validates :email, presence: true
+	validates :phone, presence: true
+	validates :rsvp, presence: true
+	validates :friend, presence: true
+	validates :memeber, presence: true
+
 	def self.search(search)
 		if search
 			where(["fname LIKE ?","%#{search}%"])
