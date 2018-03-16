@@ -1,0 +1,159 @@
+<!-- ========== Left Sidebar Start ========== -->
+
+            <div class="left side-menu">
+                <div class="sidebar-inner slimscrollleft">
+                    <!--- Divider -->
+                    <div id="sidebar-menu">
+                        <ul>
+
+
+                            <li class="has_sub">
+                                <%= link_to(root_path(@root), :class => 'waves-effect') do %>
+                                  <i class="fa fa-windows"> </i>Dashboard
+                               <% end %>
+                            </li>
+                            <li class="has_sub">
+                               <%= link_to(root_path(@root), :class => 'waves-effect') do %>
+                                  <i class="fa fa-search"> </i>Search Lifepointer
+                               <% end %>
+                            </li>
+                            <li class="has_sub">
+                               <%= link_to(root_path(@root), :class => 'waves-effect') do %>
+                                  <i class="fa fa-folder-open"> </i>Import Lifepointer
+                               <% end %>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+      <!-- Left Sidebar End -->
+<div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+          <div class="container">
+
+            <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="btn-group pull-right m-t-5 m-b-20">
+                                    <%= link_to 'Edit', edit_church_path(@church), :class => 'btn btn-default' %>
+                                    </ul>
+                                </div>
+                                <h4 class="page-title">View LifePointer</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="timeline">
+                                    <article class="timeline-item alt">
+                                        <div class="text-right">
+                                            <div class="time-show first">
+                                                <a href="#" class="btn btn-primary w-lg"><%= @church.updated_at %></a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item alt">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow-alt"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">First Name</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.fname %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item ">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">Last Name</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.lname %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item alt">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow-alt"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">Email</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.email %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">Phone Number</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.phone %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item alt">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow-alt"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">RSVP</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.rsvp %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">Did you Invite Your Friends?</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.friend %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="timeline-item alt">
+                                        <div class="timeline-desk">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                    <span class="arrow-alt"></span>
+                                                    <span class="timeline-icon"></span>
+                                                    <h4 class="text-custom">Are you a memeber of lifepointe?</h4>
+                                                    <p class="timeline-date text-muted"><%= @church.member %></p>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->

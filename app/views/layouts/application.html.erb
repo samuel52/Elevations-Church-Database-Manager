@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Churchapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://strictcity.live/elevation/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<link href="https://strictcity.live/elevation/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="https://strictcity.live/elevation/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://strictcity.live/elevation/assets/js/modernizr.min.js"></script>
+  </head>
+
+<body class="fixed-left">
+  <div id="wrapper">
+<% if user_signed_in? %>
+  	<div class="topbar">
+
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <div class="text-center">
+            <a href="/" class="logo">
+                            <i class="fa fa-angellist"></i> <span>Life<span>Pointe</span></span>
+                            <!--<span><img src="assets/images/logo.png" alt="logo" style="height: 20px;"></span>-->
+                        </a>
+        </div>
+    </div>
+
+    <!-- Button mobile view to collapse sidebar menu -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="">
+                <div class="pull-left">
+                    <button class="button-menu-mobile open-left waves-effect waves-light">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                    <span class="clearfix"></span>
+                </div>
+
+                
+
+
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li>
+                        <!-- Notification -->
+                        <div class="notification-box">
+                            <ul class="list-inline m-b-0">
+                                <li>
+                                    <a href="javascript:void(0);" class="right-bar-toggle">
+                                                    <i class="fa fa-bell"></i>
+                                                </a>
+                                    <div class="noti-dot">
+                                        <span class="dot"></span>
+                                        <span class="pulse"></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Notification bar -->
+                    </li>
+
+                    <li class="dropdown user-box">
+                        <a href="#" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
+                                        <img src="https://strictcity.live/elevation/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+                                        <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>
+                                    </a>
+
+                        <ul class="dropdown-menu">
+                            <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                            <li><%= link_to 'Import Pointer', new_church_path %></li>
+                            <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<% else %>
+   <div class="topbar">
+
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <div class="text-center">
+            <a href="/" class="logo">
+                <i class="fa fa-angellist"></i> <span>Life<span>Pointe</span></span>
+	<!--<span><img src="assets/images/logo.png" alt="logo" style="height: 20px;"></span>-->
+            </a>
+        </div>
+    </div>
+
+    <!-- Button mobile view to collapse sidebar menu -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li>
+                        <!-- Notification -->
+                        <div class="notification-box">
+                            <ul class="list-inline m-b-0">
+                                <li><%= link_to 'Signup', new_user_registration_path %></li>
+            					<li><%= link_to 'Login', new_user_session_path %></li>
+                            </ul>
+                        </div>
+                        <!-- End Notification bar -->
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<% end %>
+  
+   	 <%= yield %>
+
+</div>
+<footer class="footer">
+  2018 © The Lifepointe Church. Developed by <a href="https://twitter.com/sammyngn" target="_blank" class="text-muted">SammyNGN</a>
+</footer>
+<!-- jQuery  -->
+        <script src="https://strictcity.live/elevation/assets/js/jquery.min.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/bootstrap.min.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/detect.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/fastclick.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/jquery.slimscroll.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/jquery.blockUI.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/waves.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/wow.min.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/jquery.nicescroll.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/jquery.scrollTo.min.js"></script>
+
+        <!--Morris Chart-->
+		<script src="https://strictcity.live/elevation/assets/plugins/morris/morris.min.js"></script>
+		<script src="https://strictcity.live/elevation/assets/plugins/raphael/raphael-min.js"></script>
+
+        <!-- Counter Up  -->
+        <script src="https://strictcity.live/elevation/assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
+        <script src="https://strictcity.live/elevation/assets/plugins/counterup/jquery.counterup.min.js"></script>
+
+        <!-- Dashboard init -->
+        <script src="https://strictcity.live/elevation/assets/pages/jquery.dashboard.js"></script>
+
+
+        <!-- App js -->
+        <script src="https://strictcity.live/elevation/assets/js/jquery.core.js"></script>
+        <script src="https://strictcity.live/elevation/assets/js/jquery.app.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</body>
+</html>
