@@ -4,7 +4,7 @@ class ChurchesController < ApplicationController
   # GET /churches
   # GET /churches.json
   def index
-    @churches = Church.all.paginate(page: params[:page], per_page: 3).search(params[:search])
+    @churches = Church.all.paginate(page: params[:page], per_page: 20).search(params[:search])
   end
 
   # GET /churches/1
@@ -20,6 +20,7 @@ class ChurchesController < ApplicationController
   # GET /churches/1/edit
   def edit
   end
+
 
   # POST /churches
   # POST /churches.json
@@ -59,6 +60,11 @@ class ChurchesController < ApplicationController
       format.html { redirect_to churches_url, notice: 'Church was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def import
+   Church.import(params[:file])
+   redirect_to churches_path, notice: "Import completed"
   end
 
   private

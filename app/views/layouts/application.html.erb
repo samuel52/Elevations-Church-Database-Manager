@@ -20,6 +20,9 @@
         <link href="https://strictcity.live/elevation/assets/css/responsive.css" rel="stylesheet" type="text/css" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <script src="https://strictcity.live/elevation/assets/js/modernizr.min.js"></script>
+        <!-- Jquery filer css -->
+        <link href="https://strictcity.live/elevation/assets/plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
+        <link href="https://strictcity.live/elevation/assets/plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
   </head>
 
 <body class="fixed-left">
@@ -29,11 +32,8 @@
 
     <!-- LOGO -->
     <div class="topbar-left">
-        <div class="text-center">
-            <a href="/" class="logo">
-                            <i class="fa fa-angellist"></i> <span>Life<span>Pointe</span></span>
-                            <!--<span><img src="assets/images/logo.png" alt="logo" style="height: 20px;"></span>-->
-                        </a>
+        <div>
+          <%= link_to image_tag('logo.png', :style => 'width: 50px; margin: 10px;'), root_path %>
         </div>
     </div>
 

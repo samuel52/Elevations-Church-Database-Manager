@@ -19,7 +19,7 @@
                                <% end %>
                             </li>
                             <li class="has_sub">
-                               <%= link_to(root_path(@root), :class => 'waves-effect') do %>
+                               <%= link_to(new_church_path(@new_church), :class => 'waves-effect') do %>
                                   <i class="fa fa-folder-open"> </i>Import Lifepointer
                                <% end %>
                             </li>
@@ -46,6 +46,7 @@
                                     <table id="datatable" class="table table-striped dt-responsive nowrap">
                                         <thead>
                                             <tr>
+                                                <th>N/O</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
@@ -60,6 +61,7 @@
                                         <tbody>
                                         <% @churches.each do |church| %>
                                           <tr>
+                                            <td><%= church.id %></td>
                                             <td><%= church.fname %></td>
                                             <td><%= church.lname %></td>
                                             <td><%= church.email %></td>
